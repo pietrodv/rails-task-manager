@@ -9,10 +9,11 @@
     <%= f.text_field :details %>
   </div>
 
-  <!-- <div>
-    <%= f.label :completed %>
-    <%= f.check_box :completed %>
-  </div> -->
-
-  <%= f.submit %>
+  <% if @task.persisted? %>
+    <div>
+      <%= f.label :completed %>
+      <%= f.check_box :completed %>
+    </div>
+  <%end%>
+    <%= f.submit %>
 <% end %>
