@@ -1,0 +1,8 @@
+<h1>My Tasks</h1>
+<form action="">
+<% @tasks.each do |task| %>
+  <input type="checkbox"><%= link_to task.title, task %> <%= link_to 'Delete', task_path(task), method: :delete %><br>
+<% end %>
+</form>
+<br>
+<%= link_to '+ Add new Task', new_task_path %>
